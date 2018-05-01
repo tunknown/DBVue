@@ -1,1119 +1,1203 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 	<TITLE></TITLE>
 	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.3  (Win32)">
-	<META NAME="CREATED" CONTENT="20161026;16400000">
-	<META NAME="CHANGED" CONTENT="20170423;19230000">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20180501;23024810">
 	<STYLE TYPE="text/css">
 	<!--
-		@page { size: 29.7cm 21cm; margin: 1.27cm }
-		P { margin-bottom: 0.21cm; line-height: 115% }
-		P.western { font-family: "Calibri", sans-serif; font-size: 11pt; so-language: ru-RU }
-		P.cjk { font-family: "Calibri", sans-serif; font-size: 11pt }
-		P.ctl { font-family: "Calibri", sans-serif; font-size: 11pt }
+		@page { size: 29.7cm 21cm; margin: 1cm }
+		P { margin-bottom: 0.21cm; color: #000000 }
+		P.western { font-family: "Arial CYR", sans-serif; font-size: 12pt; so-language: ru-RU }
+		P.cjk { font-family: "Arial CYR", sans-serif; font-size: 12pt; so-language: zh-CN }
+		P.ctl { font-family: "Arial CYR", sans-serif }
 	-->
 	</STYLE>
 </HEAD>
-<BODY LANG="en-US" LINK="#000080" VLINK="#800000" DIR="LTR" STYLE="border: none; padding: 0cm">
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0.35cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Формат
-названия <SPAN LANG="en-US">sql</SPAN> объект<SPAN LANG="en-US">а</SPAN>
-грида<SPAN LANG="en-US">/действия</SPAN> ( <B>(таблицы?,)</B>
-представления, функции, процедуры) </FONT></FONT>
+<BODY LANG="ru-RU" TEXT="#000000" LINK="#000080" VLINK="#800000" DIR="LTR" STYLE="border: none; padding: 0cm">
+<P LANG="en-US" CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.35cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">DBVue: Schema driven workflow</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.35cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Здесь должны находится
+&laquo;захардкоденные&raquo; установки для всех. Если настройку можно
+поменять, то она здесь не должна упоминаться.</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.35cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Все <SPAN LANG="en-US">sql
+</SPAN>объекты системы содержат в названии разделитель, система не
+должна содержать собственных таблиц?</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.35cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Формат названия <FONT FACE="Arial, sans-serif"><SPAN LANG="en-US">sql</SPAN></FONT>
+<B>объекта грида</B><FONT FACE="Symbol"> ( </FONT><B>(таблицы?,)</B>
+представления, функции, процедуры) </FONT>
 </P>
-<TABLE WIDTH=1011 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=7 CELLSPACING=0 RULES=ROWS>
-	<COLGROUP>
-		<COL WIDTH=4>
-		<COL WIDTH=251>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=194>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=43>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=448>
-	</COLGROUP>
+<TABLE WIDTH=1035 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=53>
+	<COL WIDTH=258>
+	<COL WIDTH=199>
+	<COL WIDTH=53>
+	<COL WIDTH=461>
 	<TR>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER>№</P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm">№</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></FONT></P>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></FONT></P>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
-			блока</FONT></FONT></P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
+			блока</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
-			заполнения</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Метод
-			работы с</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			данными</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">V/L/S/T/R
-			  /P   /I/U/D</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">V</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=справочник,
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=журнал,
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">S</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=предметы(</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">PaymentItem</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">),
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">T</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=дерево(</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">ItemItem</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">),
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">R=</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">отчёт,
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P=действие
-			без резалтсета</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">,
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I=insert/U=update/D=delete</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.
-			Грид не отображется для </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P/I/U/D</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.
-			Если </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">sql
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">объекты
-			сохранения не заданы</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			для sql </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">объекта
-			грида</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			и не установлен признак прямого редактирования</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">,
-			то </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">DataSet</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">ReadOnly</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">true.</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Код
-			</B></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>sql
-			</B></SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>объекта
-			</B></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>I/U/D</B></SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>
-			должен совпадать с кодом объекта грида? Плюс- только один объект
-			на каждое действие, минус- если для нескольких </B></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>sql
-			объектов грида с разными кодами нужен один sql </B></SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>запрос,
-			то его дублировать. </B></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Предметы=дерево?</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Как
-			показать форму с несколькими гридами, а не один грид?</B></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>
-			Где указать глубину подцепления мастер-детали?</B></SPAN></FONT></FONT></P>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
+			заполнения</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Метод
+			показа данных</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">D/L/S/T/R/<SPAN LANG="en-US">Z</SPAN></FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>D</B>=справочник,
+			<B>L</B>=журнал, <B>S</B>=предметы(PaymentItem),
+			<B>T</B>=дерево(ItemItem), <B>R</B>=отчёт, <SPAN LANG="en-US"><B>Z</B></SPAN><SPAN LANG="en-US">=</SPAN>системное
+			<SPAN LANG="en-US">view</SPAN>. Если sql объекты сохранения не
+			заданы для sql объекта грида и не установлен признак прямого
+			редактирования, то DataSet.ReadOnly=true. Предметы=дерево? <B>Как
+			показать форму с несколькими гридами, а не один грид? Где указать
+			глубину подцепления мастер-детали?</B> Формат  <SPAN LANG="en-US">Z-</SPAN>системного
+			<SPAN LANG="en-US">view </SPAN>понимает клиент исходя из ссылки на
+			него, а не содержимого</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков можно опускать, если все следующие поля пусты. <SPAN LANG="en-US">|
-			</SPAN>лучше, чтобы не путать с <SPAN LANG="en-US">for xml
-			explicit</SPAN></FONT></FONT></FONT></P>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. | лучше,
+			чтобы не путать с for xml explicit</FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></FONT></P>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Код
-			объекта для упоминания в </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L/J
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">полях</FONT></FONT></P>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			объекта</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Имя
-			таблицы-источника данных</FONT></FONT></P>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Например,
+			имя таблицы-основного источника данных</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></FONT></P>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1-остаток</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">К</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">од</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
 			объекта не подлежит изменению- затратно менять все ссылки на него,
-			т.к. он указан в лукапящих объектах.</FONT></FONT></P>
+			т.к. он указан в L/J-полях лукапящих объектов.</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков можно опускать, если все следующие поля пусты. <SPAN LANG="en-US">|
-			</SPAN>лучше, чтобы не путать с <SPAN LANG="en-US">for xml
-			explicit</SPAN></FONT></FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
-			редактирования таблицы напрямую</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Использовать
-			генерацию </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">sql
-			insert/update/delete </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">даже
-			при наличии объектов </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT></P>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. | лучше,
+			чтобы не путать с for xml explicit</FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
+			редактирования таблицы напрямую</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Использовать
+			генерацию sql insert/update/delete даже при наличии объектов
+			I/U/D, если в коде указана существующая <SPAN LANG="en-US">dbo.
+			</SPAN>таблица</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков можно опускать, если все следующие поля пусты. <SPAN LANG="en-US">&rdquo;|&rdquo;
-			</SPAN>лучше, чтобы не путать с <SPAN LANG="en-US">for xml
-			explicit</SPAN></FONT></FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
-			название</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Caption
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">для
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TPanel=TDBGrid.Parent</SPAN></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Если
-			не хватает остатка места, то использовать вместо него </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">sqlserver
-			Extended properties</FONT></FONT></P>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. &rdquo;|&rdquo;
+			лучше, чтобы не путать с for xml explicit</FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
+			название</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Caption
+			для TPanel=TDBGrid.Parent</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Если
+			не хватает остатка места, то использовать вместо него sqlserver
+			Extended properties</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=RIGHT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Итого
-			не более</FONT></FONT></P>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=RIGHT><FONT SIZE=1 STYLE="font-size: 8pt">Итого
+			не более</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></FONT></P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
-			типу <SPAN LANG="en-US">sysname</SPAN></FONT></FONT></P>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
+			типу sysname</FONT></P>
 		</TD>
 	</TR>
 </TABLE>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.21cm; line-height: 0.19cm">
+<FONT SIZE=1 STYLE="font-size: 8pt">Код объекта уникален, т.к. все
+ссылки идут на код, а не на<SPAN LANG="en-US"> </SPAN>полное название
+<SPAN LANG="en-US">sql </SPAN>объекта грида</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
 </P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Объекты только на локальном
+сервере, linked server использовать нельзя.</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
 </P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Объекты
-только на локальном сервере, <SPAN LANG="en-US">linked server
-</SPAN>использовать нельзя.</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Формат
-названия поля в <SPAN LANG="en-US">sql</SPAN> объекте грида (таблице,
-представлении, функции, процедуре)</FONT></FONT></P>
-<TABLE WIDTH=1011 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=7 CELLSPACING=0 RULES=ROWS>
-	<COLGROUP>
-		<COL WIDTH=4>
-		<COL WIDTH=251>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=194>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=43>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=448>
-	</COLGROUP>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Формат названия поля в sql
+<B>объекте грида</B> (таблице, представлении, функции, процедуре)</FONT></P>
+<TABLE WIDTH=1035 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=53>
+	<COL WIDTH=257>
+	<COL WIDTH=198>
+	<COL WIDTH=57>
+	<COL WIDTH=459>
 	<TR>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER>№</P>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm">№</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></FONT></P>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></FONT></P>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
-			блока</FONT></FONT></P>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
+			блока</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
-			заполнения</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
-			объединения полей в единую группу</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">краткое
-			название группы или номер</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-</FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Например,
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Src</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			для </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">ContragentNameSource
-			+ ContragentIdSource</SPAN></FONT></FONT></P>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
+			заполнения</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
+			объединения полей в единую группу относительно лукапа</FONT></P>
+		</TD>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">краткое
+			название группы или номер</FONT></P>
+		</TD>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></P>
+		</TD>
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Например,
+			Src для ContragentNameSource + ContragentIdSource</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков можно опускать, если все следующие поля пусты. <SPAN LANG="en-US">|
-			</SPAN>лучше, чтобы не путать с <SPAN LANG="en-US">for xml
-			explicit</SPAN></FONT></FONT></FONT></P>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. | лучше,
+			чтобы не путать с for xml explicit</FONT></FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></FONT></P>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Тип
-			поля</FONT></FONT></P>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Тип
+			поля</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P/U/M/</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">F/</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">/</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">J/D</SPAN></FONT></FONT></P>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">P/U/M/F/L/J/<SPAN LANG="en-US">S</SPAN></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-1</FONT></FONT></P>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-1</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">P=
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>P</B>=
 			локатор(первичный ключ) в гриде (в т.ч. по нескольким полям) при
-			редактировании;</FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">U</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=
-			поле, доступное для лукапа из другого места, дополнительно к </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P;</SPAN></FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">M</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">FK-мастер</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			(в т.ч. по нескольким полям). Название группы нужно, если внешний
-			ключ из нескольких полей </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">смотрит</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			на один и тот же объект. Обычно, без </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L/J-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">лукапа;</FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">F=
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">FK</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">-лукап
-			(в т.ч. по нескольким полям). Название группы нужно, если лукап из
-			нескольких полей </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">смотрит</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			на один и тот же объект. Обычно, дополняется </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L/J-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">лукапом;</FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Name</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">-лукап,
-			при </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">FieldKind</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">fkLookup</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			в виде </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">DropDown
-			(не хранится);</SPAN></FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">J</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Name</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">-лукап,
-			при </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">FieldKind</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">fkData</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			через </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">join</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			в виде </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">cbElipsys
-			(не хранится);</SPAN></FONT></FONT></P>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">D=
-			неинтерпретируемые данные, можно не указывать- по умолчанию</FONT></FONT></P>
+			редактировании;</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>U</B>=
+			описательное поле(по умолчанию) для <SPAN LANG="en-US">L/J-</SPAN>лукапа
+			из другого места;</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>M</B>=
+			FK-мастер (в т.ч. по нескольким полям). Название группы нужно,
+			если внешний ключ из нескольких полей смотрит на один и тот же
+			объект. Обычно смотрит на <SPAN LANG="en-US">L-</SPAN>журнал без
+			L/J-лукапа;</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>F</B>=
+			FK-лукап (в т.ч. по нескольким полям). Название группы нужно, если
+			лукап из нескольких полей смотрит на один и тот же объект. Обычно
+			смотрит на D<SPAN LANG="en-US">-</SPAN>справочник с L/J-лукапом;</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>L</B>=
+			Name-лукап, при TField.FieldKind=fkLookup в виде DropDown (не
+			хранится);</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>J</B>=
+			Name-лукап, при TField.FieldKind=fkData через join в виде
+			cbElipsys (не хранится);</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>S</B></SPAN><SPAN LANG="en-US">=
+			FK-лукап </SPAN>на <SPAN LANG="en-US">view</SPAN> стиля
+			оформления, формат которого понимает клиент. Если стили не
+			пересекаются по объектам оформления, то их может быть несколько?
+			Обычно смотрит на <SPAN LANG="en-US">Z-</SPAN>системное <SPAN LANG="en-US">view,
+			</SPAN>формат которого понимает клиент исходя из ссылки на него;</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US"><B>''</B></SPAN>=
+			неинтерпретируемые данные</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=8>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Код
-			поля</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Имя
-			поля в таблице-источнике данных</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">0-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Для
-			внешне</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">го</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			лукапа на </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P/U</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">-поле
-			по коду и для параметров </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">sql
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">объектов
-			действия. Имя таблицы-источника данных можно получить распарсив
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">view</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">,
-			для функции/процедуры- должна быть задана процедура изменения?</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Ширина
-			колонки в символах или в % от Grid.Width</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField.</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">DisplayWidth</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			= [0-9][0-9][0-9%]</SPAN></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Если
-			не задано, то остаток от суммы заданных. Если не задано несколько,
-			то пропорционально их размеру из базы.</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">5</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Маска
-			/ Шаблон показа / редактирования</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">DisplayFormat</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">=
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">EditMask</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			экономим</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-32</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">6</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Поле
-			мастер-детали и лукапа</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Код_DataSet.Код_поля;...</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">0-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">64+24;...</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L/J</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">-лукап
-			поля не пишутся в базу, т.к. является результатом </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">join</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			на сервере или </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">lookup</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			на клиенте. Если для лукапа задан сам объект грида, то это
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">lookup</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">(</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Id</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">,</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Parent</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">)
-			в самосвязанной деревянной таблице. При выборе </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">J</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			лукапа из формы запрашивается набор полей </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">P/U</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			и вставляется в поля </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">F</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">+</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L</SPAN></FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=8>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">7</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
-			название</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TField.</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">DisplayLabel</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">0-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Если
-			заполнено, то </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TColumn</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.Visible=true.
-			Определяет только видимость в гриде, нельзя задать видимость для
-			других </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">DB</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			контролов.</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			Если не хватает остатка места, то использовать вместо него
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">sqlserver
-			Extended properties.</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=RIGHT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Итого
-			не более</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
-			типу <SPAN LANG="en-US">sysname</SPAN></FONT></FONT></P>
-		</TD>
-	</TR>
-</TABLE>
-<OL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Признак
-	объединения полей одной группы</U></FONT></FONT></P>
-</OL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Названия
-	полей кодированы и на такое название нельзя ссылаться в лукапе, т.к.
-	блоки должны иметь возможность меняться. По признаку группы можно
-	ссылаться на все её поля.</FONT></FONT></P>
-</UL>
-<OL START=2>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Тип
-	поля в группе</U></FONT></FONT></P>
-</OL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Ограничение
-	текущей реализации- поле P должно быть только одно?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">При
-	широких справочниках и коротких журналах имеет смысл жоинить и
-	показывать форму выбора из справочника вместо дропдауна.</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">TColumn</SPAN>.<SPAN LANG="en-US">ButtonStyle</SPAN>
-	определяется из типа лукапа и типа данных.</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">S|PaymentItem
-	</SPAN>деталь для <SPAN LANG="en-US">L|Payment</SPAN>, но не для
-	<SPAN LANG="en-US">V|Item</SPAN>, т.к. <SPAN LANG="en-US">Payment-
-	журнал, а Item- </SPAN>справочник, хотя оба они- <SPAN LANG="en-US">FK</SPAN>.
-	Для <SPAN LANG="en-US">R|PaymentItem их различие не важно и их можно
-	использовать, как детали.</SPAN></FONT></FONT></P>
-</UL>
-<OL START=3>
-	<LI><P STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Код
-	поля</U></FONT></FONT></P>
-</OL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">***.</FONT></FONT></P>
-</UL>
-<OL START=4>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Ширина
-	колонки в символах или в % от Grid.Width</U></FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Маска
-	/ Шаблон показа / редактирования</U></FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Поле
-	мастер-детали <SPAN LANG="en-US">и </SPAN>лукапа</U></FONT></FONT></P>
-</OL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Как
-	задать правила склейки, если указано несколько полей?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">SQLFlt
-	фильтр применять не по lookup.name, а по найденному lookup.id, а
-	отображать пользователю как для lookup.name. SQLFlt должен понимать
-	лукапные справочники.</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">при
-	вставке деталей PaymentItem в Payment использовать данные фильтра
-	SQLFlt для автозаполнения мастера PaymentItem.Payment</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Внутри
-	одного лукапа F может быть несколько разных полей из разных
-	объектов, за их отношение отвечает форма лукапа</FONT></FONT></P>
-</UL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">тексты
-	полей должны склеиваться одинаково при любом типе лукапа</FONT></FONT></P>
-</UL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Сумму
-	лукап полей можно указать и в редактируемом приёмнике и в
-	справочнике-источнике. Если лукапится из нескольких мест одно и то
-	же, то удобнее в справочнике-источнике.</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Отлукапленное
-	поле нельзя использовать как лукап для другого объекта? Только
-	потому, что нельзя совместить <SPAN LANG="en-US">L</SPAN>+<SPAN LANG="en-US">U</SPAN>
-	в одном блоке?</FONT></FONT></P>
-</UL>
-<OL START=7>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><U>Отображаемое
-	название</U></FONT></FONT></P>
-</OL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Нужны
-	ли невидимые в гриде поля, но видимые в отдельных <SPAN LANG="en-US">DB</SPAN>
-	контролах? Особенно если контролы помещаются на форму динамически.</FONT></FONT></P>
-</UL>
-<UL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
-	название можно получать из заполненных extended properties
-	MS_description</FONT></FONT></P>
-</UL>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Вопросы:</FONT></FONT></P>
-<OL>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Записи
-	визуально состоят только из одной строки? Как отображать несколько
-	строк при наличии в тексте <SPAN LANG="en-US">CRLF</SPAN>?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">форматная
-	таблица, например, &quot;справочник&quot; разрешённых типу документа
-	категорий товаров форматен для использованных в конкретном документе
-	товаров, показывать все возможные бледно и жирно выделять выбранные-
-	где указывать?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Нужен
-	ли Alignment?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Даже
-	при лукапе сущности она должна браться из единого объекта, например,
-	<SPAN LANG="en-US">view</SPAN></FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Лукап
-	для <SPAN LANG="en-US">M-</SPAN>поля нужен только если есть
-	интерфейс массового перевешивания <SPAN LANG="en-US">PaymentItem</SPAN>
-	в другой <SPAN LANG="en-US">Payment</SPAN>?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Нужна
-	ли автоматическая свёртка, когда в мастер-гриде <SPAN LANG="en-US">Payment</SPAN>
-	показывается, например, количество записей в <SPAN LANG="en-US">PaymentItem</SPAN>
-	в виде, похожем на лукапное поле с вызываемым окном, а не на
-	отдельной закладке интерфейса? Такие лукапы можно использовать для
-	показа соответствующих гридов вместо показа по умолчанию всегда?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><B>Нужен
-	ли признак автооткрытия/автопоказа грида лукапа</B><SPAN LANG="en-US"><B>
-	(+</B></SPAN><B>мастер/детали?</B><SPAN LANG="en-US"><B>)</B></SPAN><B>
-	рядом с основным гридом? Совместно с пунктом про автоматическую
-	свёртку.</B></FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Как
-	отделить функциональные блоки(поля?) от визуальных?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>если указана процедура с параметрами, значений которых нет в
-	полях, например, захардкоденные константы, как их передавать? Для
-	коротких резалтсетов добавлять невидимое const поле?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Чтобы удалить записи из нескольких таблиц при команде
-	удаления одной записи из этого объекта нужно здесь иметь несколько
-	невидимых полей с прописанным Field/Param Del?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Как удалять каскадно? Например, как при удалении Payment
-	указать удаление его PaymentItem? Учитывать, что инверсия
-	направления мастер-деталь останавливает каскадное удаление.</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Как получать значение PK до/после вставки для выделения в
-	гриде свежевставленной записи?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Как указать порядок множественных операций при
-	вставке/удалении для соблюдения PK/FK если в разных полях указано
-	несколько таблиц?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Как указать значения по умолчанию(лучше, динамические) для
-	вставки?</FONT></FONT></P>
-	<LI><P LANG="ru-RU" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">I/U/D:
-	</SPAN>Можно использовать функцию PARSENAME со сдвигом аргументов.
-	Server(4)-&gt;BD(3)</FONT></FONT></P>
-</OL>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">пример
-view на таблицу dbo.[L!Payments]	выровнено для удобства</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[0|P|
-                          |0|dbo.Payments.Id]</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[1|F|
-                          |0|dbo.Payments.CustSrcId      |    |      
-            |dbo.L!Customers.Id       ]	выбирается из лукапа, пишется
-в базу</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[1|L|Плательщик
-     |0|dbo.Payments.CustSrcName|20|                  
-|dbo.L!Customers.Name]	выбирается из лукапа, не пишется в базу,
-только для показа при вставке новой записи, джоин в базе должен
-совпадать с выбором значения по лукапу</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[2|F|
-                         |0|dbo.Payments.CustDstId       |    |      
-            |dbo.L!Customers.Id       ]</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[2|L|Получатель
-     |0|dbo.Payments.CustDstName|20|                  
-|dbo.L!Customers.Name]</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[
- |  |Дата платежа   |0|dbo.Payments.Moment          |10|dd.mm.yyyy]</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">[
- |  |Сумма платежа|1|dbo.Payments.Amount          |9  |#,00]</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Формат
-названия <SPAN LANG="en-US">sql</SPAN> объекта действи<SPAN LANG="en-US">я</SPAN>
-над гридом/выбранными записями (процедуры)</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">См.Формат
-названия <SPAN LANG="en-US">sql</SPAN> объекта грида<SPAN LANG="en-US">/действия</SPAN></FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><BR>
-</P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Формат
-названия параметра в <SPAN LANG="en-US">sql</SPAN> объекте действия
-над гридом/выбранными записями (процедуре (и функции?))</FONT></FONT></P>
-<TABLE WIDTH=1011 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=7 CELLSPACING=0 RULES=ROWS>
-	<COLGROUP>
-		<COL WIDTH=4>
-		<COL WIDTH=251>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=194>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=43>
-	</COLGROUP>
-	<COLGROUP>
-		<COL WIDTH=448>
-	</COLGROUP>
-	<TR>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER>№</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
-			блока</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western" ALIGN=CENTER><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
-			заполнения</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Префикс
-			параметра</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">@</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 5pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
 			<P CLASS="western"><BR>
 			</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
+		<TD WIDTH=53 HEIGHT=6>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Источник
-			параметра</FONT></FONT></P>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			поля</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Код
-			sql объекта </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">грида</FONT></FONT></P>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Например,
+			имя поля в таблице-источнике данных, для вычисления может быть не
+			задано</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-</FONT></FONT></P>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></FONT></P>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Если
-			не указано ни для одного параметра, то поля с совпадающим кодом и
-			типом данных из любого </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">sql
-			объекта </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">грида
-			при совпадении их количества 1-к-1.</FONT></FONT></P>
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Для
+			внешнего лукапа на P/U-поле по коду и для параметров sql объектов
+			действия. Имя таблицы-источника данных можно получить распарсив
+			view, для функции/процедуры- должна быть задана процедура
+			изменения? Если код не задан для <SPAN LANG="en-US">S-</SPAN>поля,
+			то стиль для всей записи, если задан, то только для ячейки с тем
+			же кодом? Если код задан, то на него можно сослаться в лукапах
+			снаружи, даже если поле вычисляемое</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">#</FONT></FONT></FONT></P>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков можно опускать, если все следующие поля пусты. </FONT></FONT></FONT><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="en-US">|
-			</SPAN></FONT></FONT></FONT><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">лучше,
-			чтобы не путать с </FONT></FONT></FONT><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt"><SPAN LANG="en-US">for
-			xml explicit</SPAN></FONT></FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=7>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Источник
-			параметра</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Код
-			поля sql объекта грида</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-
-			остаток</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Если
-			не указано, то поле с совпадающим типом данных с любым кодом из
-			любого </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">sql
-			объекта </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">грида
-			при совпадении их количества 1-к-1.</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">#</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=8>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></FONT></P>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
-			объединения параметров в группу</FONT></FONT></P>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Маска
+			/ Шаблон показа / редактирования</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-9</FONT></FONT></P>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">TField.DisplayFormat=
+			TField.EditMask экономим</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">0-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-32</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Если
-			несколько параметров смотрят на одно view</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">,
-			например, </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">dbo.Payment.ContragentSrc
-			и dbo.Payment.ContragentDst- </SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">оба</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">
-			из dbo.Contragent</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
-			</P>
-		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">#</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><BR>
 			</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=8>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=251>
-			<P CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Порядок
-			запроса параметров у пользователя</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0-9</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">0-</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
-		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Если
-			не указаны оба источника или они разные- показывать грид со
-			списком записей для ручного выбора пользователем</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">.</FONT></FONT></P>
-		</TD>
-	</TR>
-	<TR VALIGN=TOP>
-		<TD WIDTH=4>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
-			блоков</FONT></FONT></FONT></P>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></FONT></P>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT COLOR="#808080"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></FONT></P>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">5</FONT></FONT></P>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">5</FONT></P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Nullability</FONT></FONT></P>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Поле
+			мастер-детали и лукапа</FONT></P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></FONT></P>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код_DataSet.Код_поля;...</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></FONT></P>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-64+24;...</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Для
-			подсветки</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">
-			в гриде незаполненных полей, чтобы не давать сохранять без их
-			заполнения. Задаётся здесь, чтобы не парсить </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">syscomments
-			</SPAN></FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">на
-			</FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">@param
-			int=null</SPAN></FONT></FONT></P>
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">L/J-лукап
+			поля не пишутся в базу, т.к. является результатом join на сервере
+			или lookup на клиенте. Если для лукапа задан сам объект грида, то
+			это lookup(Id,Parent) в самосвязанной деревянной таблице. При
+			выборе J лукапа из формы запрашивается набор полей P/U и
+			вставляется в поля F+L</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=4 HEIGHT=2>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=251>
-			<P LANG="ru-RU" CLASS="western"><BR>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=194>
-			<P LANG="ru-RU" CLASS="western" ALIGN=RIGHT><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Итого
-			не более</FONT></FONT></P>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=6>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">6</FONT></P>
 		</TD>
-		<TD WIDTH=43>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></FONT></P>
+		<TD WIDTH=257>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
+			название</FONT></P>
 		</TD>
-		<TD WIDTH=448>
-			<P LANG="ru-RU" CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
-			типу <SPAN LANG="en-US">sysname</SPAN></FONT></FONT></P>
+		<TD WIDTH=198>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">TField.DisplayLabel</FONT></P>
+		</TD>
+		<TD WIDTH=57>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></P>
+		</TD>
+		<TD WIDTH=459>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">T<SPAN LANG="en-US">c</SPAN>olumn.Visible:=(заполнено
+			<SPAN LANG="en-US">and UserChoosed</SPAN>). Определяет только
+			возможность показа в гриде, нельзя задать видимость для других DB
+			контролов. Если не хватает остатка места, то использовать вместо
+			него sqlserver Extended properties.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=257 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=198 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=RIGHT><FONT SIZE=1 STYLE="font-size: 8pt">Итого
+			не более</FONT></P>
+		</TD>
+		<TD WIDTH=57 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></P>
+		</TD>
+		<TD WIDTH=459 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
+			типу sysname</FONT></P>
 		</TD>
 	</TR>
 </TABLE>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt"><U>Признак объединения полей
+	одной группы</U></FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Названия
+полей кодированы и на такое название нельзя ссылаться в лукапе, т.к.
+блоки должны иметь возможность меняться. По признаку группы можно
+ссылаться на все её поля.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT FACE="Times New Roman CYR, serif">2.	</FONT><FONT SIZE=1 STYLE="font-size: 8pt"><U>Тип
+поля в группе</U></FONT></P>
+<UL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Ограничение текущей реализации-
+	поле P должно быть только одно?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">При широких справочниках и
+	коротких журналах имеет смысл жоинить и показывать форму выбора из
+	справочника вместо дропдауна.</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">TColumn.ButtonStyle определяется
+	из типа лукапа и типа данных.</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">S|PaymentItem деталь для
+	L|Payment, но не для D|Item, т.к. Payment- журнал, а Item-
+	справочник, хотя оба они- FK. Для R|PaymentItem их различие не важно
+	и их можно использовать, как детали.</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">В лукапящем объекте могут быть
+	использованы для </FONT><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">L/J-</SPAN></FONT><FONT SIZE=1 STYLE="font-size: 8pt">лукапа
+	не только </FONT><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">U
+	</SPAN></FONT><FONT SIZE=1 STYLE="font-size: 8pt">поля справочника.</FONT></P>
+</UL>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT FACE="Times New Roman CYR, serif">3.	</FONT><FONT SIZE=1 STYLE="font-size: 8pt"><U>Код
+поля</U></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">***.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT FACE="Times New Roman CYR, serif">4.	</FONT><FONT SIZE=1 STYLE="font-size: 8pt"><U>Маска
+/ Шаблон показа / редактирования</U></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT FACE="Times New Roman CYR, serif">5.	</FONT><FONT SIZE=1 STYLE="font-size: 8pt"><U>Поле
+мастер-детали и лукапа</U></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Как
+задать правила склейки, если указано несколько полей?</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">SQLFlt
+фильтр применять не по lookup.name, а по найденному lookup.id, а
+отображать пользователю как для lookup.name. SQLFlt должен понимать
+лукапные справочники.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">при
+вставке деталей PaymentItem в Payment использовать данные фильтра
+SQLFlt для автозаполнения мастера PaymentItem.Payment</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Внутри
+одного лукапа F может быть несколько разных полей из разных объектов,
+за их отношение отвечает форма лукапа</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">тексты
+полей должны склеиваться одинаково при любом типе лукапа</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Сумму
+лукап полей можно указать и в редактируемом приёмнике и в
+справочнике-источнике. Если лукапится из нескольких мест одно и то
+же, то удобнее в справочнике-источнике.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Отлукапленное
+поле нельзя использовать как лукап для другого объекта? Только
+потому, что нельзя совместить L+U в одном блоке?</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT FACE="Times New Roman CYR, serif">6.	</FONT><FONT SIZE=1 STYLE="font-size: 8pt"><U>Отображаемое
+название</U></FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Нужны
+ли невидимые в гриде поля, но видимые в отдельных DB контролах?
+Особенно если контролы помещаются на форму динамически.</FONT></P>
+<P CLASS="western" STYLE="margin-left: 1.27cm; text-indent: -0.64cm; margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+&#61623;<FONT FACE="Symbol">	</FONT><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
+название можно получать из заполненных extended properties
+MS_description</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
 </P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Вопросы:</FONT></P>
+<OL>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Записи визуально состоят только
+	из одной строки? Как отображать несколько строк при наличии в тексте
+	CRLF?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Ширина колонки в символах при
+	отсутствии настроек пользователя определяется автоматически по типу
+	данных?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Форматная таблица, например,
+	&quot;справочник&quot; разрешённых типу документа категорий товаров
+	форматен для использованных в конкретном документе товаров,
+	показывать все возможные бледно и жирно выделять выбранные-
+	оформление указывать через стиль?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Alignment указывать через стиль?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Даже при лукапе сущности она
+	должна браться из единого объекта, например, view</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Лукап для M-поля нужен только
+	если есть интерфейс массового перевешивания PaymentItem в другой
+	Payment?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Нужна ли автоматическая свёртка,
+	когда в мастер-гриде Payment показывается, например, количество
+	записей в PaymentItem в виде, похожем на лукапное поле с вызываемым
+	окном, а не на отдельной закладке интерфейса? Такие лукапы можно
+	использовать для показа соответствующих гридов вместо показа по
+	умолчанию всегда?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt"><B>Нужен ли признак
+	автооткрытия/автопоказа грида лукапа (+мастер/детали?) рядом с
+	основным гридом? Совместно с пунктом про автоматическую свёртку.</B></FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">Как отделить функциональные
+	блоки(поля?) от визуальных?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: если указана процедура с
+	параметрами, значений которых нет в полях, например, захардкоденные
+	константы, как их передавать? Для коротких резалтсетов добавлять
+	невидимое const поле?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Чтобы удалить записи из
+	нескольких таблиц при команде удаления одной записи из этого объекта
+	нужно здесь иметь несколько невидимых полей с прописанным
+	Field/Param Del?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Как удалять каскадно?
+	Например, как при удалении Payment указать удаление его PaymentItem?
+	Учитывать, что инверсия направления мастер-деталь останавливает
+	каскадное удаление.</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Как получать значение PK
+	до/после вставки для выделения в гриде свежевставленной записи?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Как указать порядок
+	множественных операций при вставке/удалении для соблюдения PK/FK
+	если в разных полях указано несколько таблиц?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Как указать значения по
+	умолчанию(лучше, динамические) для вставки?</FONT></P>
+	<LI><P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+	<FONT SIZE=1 STYLE="font-size: 8pt">I/U/D: Можно использовать
+	функцию PARSENAME со сдвигом аргументов. Server(4)-&gt;BD(3)</FONT></P>
+</OL>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
 </P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt"><SPAN LANG="en-US">Одна
-процедура обслуживает только один грид</SPAN>, если он задан в её
-параметрах</FONT></FONT></P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Одна
-процедура обслуживает только совместимый набор полей в любых гридах,
-если они не заданы ни в одном парамтре? Например, экспорт любого
-грида в Excel</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Как
-сделать передачу в процедуру без заданного грида(<SPAN LANG="en-US">экспорт
-любого грида в Excel</SPAN>) заданные в гриде фильтры?</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Мультиселект
-в гриде передавать как фильтр по идентификаторам</FONT></FONT></P>
-<P LANG="ru-RU" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Фильтры
-для процедуры- сохранять её резалтсет во временную таблицу или через
-<SPAN LANG="en-US">openquery?</SPAN></FONT></FONT></P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Процедуры
-для источников данных с совпадающими пользовательскими типами данных
-поля с параметром, например TImage</FONT></FONT></P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">Поддержка
-не в sql, а в delphi?</FONT></FONT></P>
-<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">В
-процедуре до 2100 параметров</FONT></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">пример view на таблицу
+dbo.[L!Payments] выровнено для удобства</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[0|P| |0|dbo.Payments.Id]</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[1|F| |0|dbo.Payments.CustSrcId |
+| |dbo.L!Customers.Id ] <SPAN LANG="en-US">--</SPAN>выбирается из
+лукапа, пишется в базу</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[1|L|Плательщик
+|0|dbo.Payments.CustSrcName|20| |dbo.L!Customers.Name] <SPAN LANG="en-US">--</SPAN>выбирается
+из лукапа, не пишется в базу, только для показа при вставке новой
+записи, джоин в базе должен совпадать с выбором значения по лукапу</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[2|F| |0|dbo.Payments.CustDstId |
+| |dbo.L!Customers.Id ]</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[2|L|Получатель
+|0|dbo.Payments.CustDstName|20| |dbo.L!Customers.Name]</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[ | |Дата платежа
+|0|dbo.Payments.Moment |10|dd.mm.yyyy]</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">[ | |Сумма
+платежа|1|dbo.Payments.Amount |9 |#,00]</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Формат названия sql <B>объекта
+действия</B> над гридом/выбранными записями (процедуры)</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<TABLE WIDTH=1035 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=53>
+	<COL WIDTH=258>
+	<COL WIDTH=199>
+	<COL WIDTH=53>
+	<COL WIDTH=461>
+	<TR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm">№</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
+			блока</FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
+			заполнения</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Метод
+			работы с данными</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">I/U/D/<SPAN LANG="en-US">C/</SPAN>P</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt"><B>I</B>=insert/<B>U</B>=update/<B>D</B>=delete,
+			<SPAN LANG="en-US"><B>C</B></SPAN><SPAN LANG="en-US">=check </SPAN>уже
+			введённых значений ещё до <SPAN LANG="en-US">Post, </SPAN>например,
+			при переходе к заполнению следующего поля<SPAN LANG="en-US">,
+			</SPAN><B>P</B>=действие без резалтсета. Записи грида не
+			меняются(?) при I/U/D/P, но есть переход на свежеобработанную
+			запись или в другой грид. Может возвращаться одна или несколько
+			записей с <SPAN LANG="en-US">P/U-</SPAN>локатором и типом объекта,
+			если его нельзя узнать по локатору. Если sql объекты сохранения не
+			заданы для sql объекта грида и не установлен признак прямого
+			редактирования, то DataSet.ReadOnly=true. <B>Код sql объекта I/U/D
+			должен совпадать с кодом объекта грида? Плюс- только один объект
+			на каждое действие, минус- если для нескольких sql объектов грида
+			с разными кодами нужен один sql запрос, то его дублировать.</B>
+			<SPAN LANG="en-US">C=check </SPAN>не вызывается, если меняются
+			поля, не перечисленные в его параметрах. Обязательные поля
+			перечислются в параметрах, т.к. они могут быть разными для разных
+			действий</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. | лучше,
+			чтобы не путать с for xml explicit</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			объекта</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Для
+			которого доступно это действие</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1-остаток</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			объекта не подлежит изменению- затратно менять все ссылки на него,
+			т.к. он указан в лукапящих объектах и по нему отбираются доступные
+			действия для <SPAN LANG="en-US">sql </SPAN>объекта грида</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Отображаемое
+			название</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Caption
+			для TPanel=TDBGrid.Parent</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-остаток</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Для
+			<SPAN LANG="en-US">I/U/D </SPAN>захардкодено в выделенных кнопках,
+			может быть использовано для названий пунктов <SPAN LANG="en-US">TPopupMenu</SPAN>.
+			Если не хватает остатка места, то использовать вместо него
+			sqlserver Extended properties</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=RIGHT><FONT SIZE=1 STYLE="font-size: 8pt">Итого
+			не более</FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
+			типу sysname</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Желательна уникальность полей
+<SPAN LANG="en-US">[Код объекта]+[Отображаемое название], </SPAN>чтобы
+пользователь мог однозначно выбирать действия. Кроме незаполненных
+названий для стандартных <SPAN LANG="en-US">I/U/D</SPAN></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Не держать функционал в <SPAN LANG="en-US">sql
+</SPAN>объектах действия, но использовать их, как обкладку для
+настоящей процедуры</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt"><B>Как указать, что <SPAN LANG="en-US">sql
+</SPAN>объект действия поддерживает множественную передачу параметров
+от <SPAN LANG="en-US">multiselect </SPAN>в гриде или из списка
+параметров в пользовательской таблице?</B></FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Формат названия параметра в <B>sql
+объекте</B> действия над гридом/выбранными записями (процедуре (и
+функции?))</FONT></P>
+<TABLE WIDTH=1035 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=1 CELLSPACING=0>
+	<COL WIDTH=53>
+	<COL WIDTH=258>
+	<COL WIDTH=199>
+	<COL WIDTH=53>
+	<COL WIDTH=461>
+	<TR>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm">№</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Блок</FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Заполнение</FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Длина
+			блока</FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=CENTER STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Описание
+			заполнения</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Префикс
+			параметра</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">@</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 5pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Источник
+			параметра</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			sql объекта грида</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-</FONT></P>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">остаток</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Если
+			не указано ни для одного параметра, то поля с совпадающим кодом и
+			типом данных из любого sql объекта грида при совпадении их
+			количества 1-к-1.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">#</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков можно опускать, если все следующие поля пусты. | лучше,
+			чтобы не путать с for xml explicit</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=5>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">2</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Источник
+			параметра</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Код
+			поля sql объекта грида</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-
+			остаток</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Если
+			не указано, то поле с совпадающим типом данных с любым кодом из
+			любого sql объекта грида при совпадении их количества 1-к-1.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">#</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 HEIGHT=6>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">3</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Признак
+			объединения параметров в группу</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-9</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0-1</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Если
+			несколько параметров смотрят на одно view, например,
+			dbo.Payment.ContragentSrc и dbo.Payment.ContragentDst- оба из
+			dbo.Contragent.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">Разделитель
+			блоков</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">|/!</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT COLOR="#808080"><FONT SIZE=1 STYLE="font-size: 6pt">1</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">4</FONT></P>
+		</TD>
+		<TD WIDTH=258>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Обязательность</FONT></P>
+		</TD>
+		<TD WIDTH=199>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">0/1</FONT></P>
+		</TD>
+		<TD WIDTH=53>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">1</FONT></P>
+		</TD>
+		<TD WIDTH=461>
+			<P CLASS="western" STYLE="margin-top: 0.18cm"><FONT SIZE=1 STYLE="font-size: 8pt">Для
+			запрета выбора действия по записи без их заполнения. Задаётся
+			здесь, чтобы не парсить syscomments на @param int=null. В меню
+			выбора действия показывать список обязательных для него полей.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=258 BGCOLOR="#dddddd">
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+		<TD WIDTH=199 BGCOLOR="#dddddd">
+			<P CLASS="western" ALIGN=RIGHT><FONT SIZE=1 STYLE="font-size: 8pt">Итого
+			не более</FONT></P>
+		</TD>
+		<TD WIDTH=53 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">128</FONT></P>
+		</TD>
+		<TD WIDTH=461 BGCOLOR="#dddddd">
+			<P CLASS="western"><FONT SIZE=1 STYLE="font-size: 8pt">согласно
+			типу sysname</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0.21cm; line-height: 0.21cm">
+<FONT SIZE=1 STYLE="font-size: 8pt">Порядок запроса параметров у
+пользователя задаётся порядком следования параметров в тексте
+хранимой процедуры. Если не указаны оба источника или они разные-
+показывать грид со списком записей для ручного выбора пользователем.</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Одна процедура обслуживает только
+один <SPAN LANG="en-US">sql </SPAN>объект грида, если он задан в её
+параметрах</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Одна процедура обслуживает только
+совместимый набор полей в любых гридах, если они не заданы ни в одном
+парамтре? Например, экспорт любого грида в Excel</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Как сделать передачу в процедуру
+без заданного грида(экспорт любого грида в Excel) заданные в гриде
+фильтры?</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Мультиселект в гриде передавать
+как фильтр по идентификаторам</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Фильтры для процедуры- сохранять
+её резалтсет во временную таблицу или через openquery?</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Процедуры для источников данных с
+совпадающими пользовательскими типами данных поля с параметром,
+например TImage</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">Поддержка не в sql, а в delphi?</FONT></P>
+<P CLASS="western" STYLE="margin-top: 0.18cm; margin-bottom: 0cm; line-height: 115%">
+<FONT SIZE=1 STYLE="font-size: 8pt">В процедуре до 2100 параметров</FONT></P>
 </BODY>
 </HTML>
