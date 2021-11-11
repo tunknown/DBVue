@@ -1,0 +1,129 @@
+object SQLFilterUIFast: TSQLFilterUIFast
+  Left = 344
+  Height = 99
+  Top = 200
+  Width = 291
+  ActiveControl = DBLEValue
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSizeToolWin
+  ClientHeight = 99
+  ClientWidth = 291
+  Color = clBtnFace
+  Constraints.MaxHeight = 145
+  Constraints.MinHeight = 99
+  Constraints.MinWidth = 291
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Shell Dlg'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object PComparison: TPanel
+    Left = 0
+    Height = 99
+    Top = 0
+    Width = 60
+    Align = alLeft
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    ClientHeight = 99
+    ClientWidth = 60
+    TabOrder = 6
+    object LBComparison: TListBox
+      Left = 1
+      Height = 97
+      Top = 1
+      Width = 58
+      Align = alClient
+      BorderStyle = bsNone
+      ItemHeight = 0
+      OnSelectionChange = LBComparisonSelectionChange
+      TabOrder = 0
+    end
+  end
+  object DBLEValue: TDBLookupComboBox
+    Left = 68
+    Height = 21
+    Top = 36
+    Width = 177
+    Anchors = [akTop, akLeft, akRight]
+    BorderStyle = bsSingle
+    ListFieldIndex = 0
+    ListSource = DSValues
+    LookupCache = False
+    TabOrder = 0
+  end
+  object BBSearch: TBitBtn
+    Left = 252
+    Height = 22
+    Top = 36
+    Width = 32
+    Anchors = [akTop, akRight]
+    Kind = bkHelp
+    TabOrder = 1
+  end
+  object RGOrder: TRadioGroup
+    Left = 68
+    Height = 35
+    Top = 60
+    Width = 130
+    AutoFill = True
+    Caption = 'Сортировка'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 17
+    ClientWidth = 126
+    Columns = 3
+    ItemIndex = 0
+    Items.Strings = (
+      'Нет '
+      'А-Я'
+      'Я-А'
+    )
+    TabOrder = 2
+  end
+  object CBVisible: TCheckBox
+    Left = 204
+    Height = 17
+    Top = 80
+    Width = 79
+    Caption = 'Поле видно'
+    TabOrder = 3
+  end
+  object BBClear: TBitBtn
+    Left = 68
+    Height = 25
+    Top = 4
+    Width = 64
+    Caption = 'Снять'
+    Kind = bkCancel
+    ModalResult = 2
+    OnClick = BBClearClick
+    TabOrder = 4
+  end
+  object BBSet: TBitBtn
+    Left = 141
+    Height = 25
+    Top = 4
+    Width = 104
+    Caption = 'Установить'
+    Default = True
+    Kind = bkAll
+    ModalResult = 8
+    OnClick = BBSetClick
+    TabOrder = 5
+  end
+  object DSValues: TDataSource
+    Left = 48
+    Top = 20
+  end
+end

@@ -1,0 +1,858 @@
+﻿object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = True
+  Height = 307
+  HorizontalOffset = 248
+  VerticalOffset = 150
+  Width = 286
+  object SQLConnector: TSQLConnector
+    Connected = False
+    LoginPrompt = True
+    DatabaseName = 'DBVue'
+    KeepConnection = False
+    Transaction = SQLTransaction
+    HostName = 'UNKNOWN'
+    ConnectorType = 'MSSQLServer'
+    Left = 32
+  end
+  object SQLTransaction: TSQLTransaction
+    Active = False
+    Database = SQLConnector
+    Left = 32
+    Top = 53
+  end
+  object QClasses: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'select'
+      #9'*'
+      'from'
+      #9'ShowClasses'
+      'where'
+      #9'Class'#9'like'#9':Class'#9'-- учитывать классы объектов через точку'
+      'order'#9'by'
+      #9'Class'
+      #9',Method'
+      #9',Sequence'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Class'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 32
+    Top = 120
+  end
+  object QMasterDetail: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'
+      #9'*'
+      'FROM'
+      #9'dbo.ShowAttributes'
+      'where'
+      #9#9'ClassRef='#9':Class'
+      #9'and'#9'Method='#9#9'''M'''
+      'order'#9'by'
+      #9'Class'
+      #9',Sequence'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Class'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 168
+    Top = 120
+  end
+  object QActions: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'
+      #9'ObjectId'
+      #9',ObjectName'
+      #9',Class'
+      #9',Method'
+      #9',Sequence'
+      #9',Caption'
+      'FROM'
+      #9'dbo.ShowActions'
+      '/*where'
+      #9#9'Class'#9'like'#9':Class'
+      #9'and'#9'Method'#9'like'#9':Method*/'
+      '/*union'#9'all'
+      'SELECT'
+      #9'ObjectId='#9'null'
+      #9',ObjectName='#9'null'
+      #9',Class='#9#9''''''
+      #9',Method='#9'null'
+      #9',Sequence='#9'null'
+      #9',Caption='#9'null*/'
+      'order'#9'by'
+      #9'Class'
+      #9',Method'
+      #9',Sequence'
+      #9',Caption'
+    )
+    Params = <>
+    UsePrimaryKeyAsKey = False
+    Left = 32
+    Top = 180
+  end
+  object QParameters: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'
+      #9'*'
+      'FROM'
+      #9'dbo.ShowParameters'
+      'where'
+      #9'Class'#9'like'#9':Class'
+      'order'#9'by'
+      #9'Class'
+      #9',Sequence'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Class'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 100
+    Top = 180
+  end
+  object QSQLize: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'declare'#9'@id'#9#9'int'
+      #9',@sScript'#9'nvarchar ( max )'
+      #9',@sMetod'#9'char ( 1 )'
+      '----------'
+      'set'#9'@sMetod='#9':Method'
+      '----------'
+      'select'
+      #9'@id='#9#9'ObjectId'
+      #9',@sScript='#9'''exec'#9'''+'#9'quotename ( ObjectName )'
+      'from'
+      #9'dbo.ShowActions'
+      'where'
+      #9#9'Class='#9#9':Class'
+      #9'and'#9'Method='#9#9'@sMetod'
+      #9'and'#9'Sequence='#9':Sequence'
+      'if'#9'1<'#9'@@RowCount'
+      #9'raiserror ( ''Дублирующееся задание действий'','#9'18,'#9'1 )'
+      '----------'
+      'select'
+      #9'@sScript='#9'@sScript'
+      #9#9'+'#9''''
+      #9#9''''
+      #9#9'+'#9'case'#9't.Sequence2'
+      #9#9#9#9'when'#9'1'#9'then'#9''''''
+      #9#9#9#9'else'#9#9#9''','''
+      #9#9#9'end'
+      #9#9'+'#9'txt'
+      'from'
+      #9'( select'
+      #9#9'txt='#9#9'sp.ParameterName+'#9'''='#9':"''+'#9'sc.ColumnName+'#9'''"'''
+      #9#9',Sequence2='#9'row_number()'#9'over'#9'( order'#9'by'#9'sp.Sequence )'
+      #9'from'
+      #9#9'dbo.ShowParameters'#9'sp'
+      #9#9',dbo.ShowAttributes'#9'sc'
+      #9'where'
+      #9#9#9'sc.Class='#9'sp.Class'
+      #9#9'and'#9'sp.ObjectId='#9'@id'
+      #9#9'and'#9'sc.Attribute='#9'sp.Attribute'#9'-- anyway skip nulled Attributes for proc exec script generation'
+      #9#9'and'#9'('#9'@sMetod='#9'''I'''#9'and'#9'isnull ( sc.Method,'#9''''' )<> ''K'''
+      #9#9#9'or'#9'@sMetod='#9'''U'''
+      #9#9#9'or'#9'@sMetod='#9'''D'''#9'and'#9'sc.Method= ''K'' )'#9')'#9't'
+      'order'#9'by'
+      #9't.Sequence2'
+      '----------'
+      'select'#9'Script='#9'@sScript'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Method'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'Class'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'Sequence'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 32
+    Top = 240
+  end
+  object QAttributesRef: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'#9'top'#9'( 1 )'
+      #9'IdFieldName='#9#9'gs.ColumnName'
+      #9',gs.ClassRef'
+      #9',IdFieldNameRef='#9'gs.AttributeRef'
+      #9',NameFieldNameRef='#9'ge.AttributeRef'
+      'FROM'
+      #9'DBVue.dbo.ShowAttributes'#9'ge'
+      #9',DBVue.dbo.ShowAttributes'#9'gs'
+      'where'
+      #9#9'ge.ObjectName='#9':ObjectName'
+      #9'and'#9'ge.ColumnName='#9':ColumnName'
+      #9'and'#9'gs.ObjectName='#9'ge.ObjectName'
+      #9'and'#9'gs.[group]='#9'ge.[group]'
+      #9'and'#9'gs.Method='#9'''F'''
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'ObjectName'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ColumnName'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 168
+    Top = 180
+  end
+  object QAttributesAll: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Sequence'
+        Attributes = [faReadonly]
+        DataType = ftSmallint
+        Precision = -1
+      end    
+      item
+        Name = 'name'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'code'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'type'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'width'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'mask'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'group'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_object'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'lookup_field'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end    
+      item
+        Name = 'caption'
+        Attributes = [faReadonly]
+        DataType = ftString
+        Precision = -1
+        Size = 128
+      end>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'
+      #9'*'
+      'FROM'
+      #9'dbo.ShowAttributes'
+      'order'#9'by'
+      #9'ObjectName'
+      #9',Sequence'
+    )
+    Params = <>
+    UsePrimaryKeyAsKey = False
+    Left = 168
+    Top = 72
+  end
+  object QClassRoot: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <>
+    Database = SQLConnector
+    Transaction = SQLTransaction
+    ReadOnly = True
+    SQL.Strings = (
+      'select'#9'top'#9'( 1 )'
+      #9't.TABLE_SCHEMA'
+      #9',t.TABLE_NAME'
+      'from'
+      #9'INFORMATION_SCHEMA.TABLES'#9't'
+      #9'left'#9'join'#9'INFORMATION_SCHEMA.VIEW_TABLE_USAGE'#9'vtu'#9'on'
+      #9#9'vtu.VIEW_CATALOG='#9't.TABLE_CATALOG'
+      #9'and'#9'vtu.VIEW_SCHEMA='#9't.TABLE_SCHEMA'
+      #9'and'#9'vtu.VIEW_NAME='#9#9't.TABLE_NAME'
+      #9'and'#9'vtu.TABLE_CATALOG='#9'vtu.VIEW_CATALOG'
+      #9'and'#9'vtu.TABLE_SCHEMA='#9'vtu.VIEW_SCHEMA'
+      #9'and'#9'vtu.TABLE_NAME'#9'like'#9':Class+'#9'''|_%'''
+      'where'
+      #9#9't.TABLE_CATALOG='#9':DB'
+      #9'and'#9't.TABLE_NAME'#9'like'#9':Class+'#9'''|_%'''
+      #9'and'#9'vtu.VIEW_NAME'#9'is'#9'null'
+      'order'#9'by'
+      #9't.TABLE_SCHEMA'
+      #9',t.TABLE_NAME'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'Class'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DB'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 168
+    Top = 240
+  end
+end

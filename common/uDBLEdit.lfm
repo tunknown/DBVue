@@ -1,0 +1,38 @@
+object DBLookupEdit: TDBLookupEdit
+  Left = 0
+  Height = 20
+  Top = 0
+  Width = 202
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  ClientHeight = 20
+  ClientWidth = 202
+  Constraints.MaxHeight = 20
+  OnResize = FrameResize
+  TabOrder = 0
+  DesignLeft = 262
+  DesignTop = 175
+  object DBG: TDBGrid
+    Left = 0
+    Height = 20
+    Top = 0
+    Width = 202
+    Align = alClient
+    Anchors = [akTop, akLeft, akRight]
+    Color = clWindow
+    Columns = <    
+      item
+        ButtonStyle = cbsEllipsis
+        Title.Caption = 'Title'
+        Width = 153
+      end>
+    FixedCols = 0
+    Options = [dgEditing, dgAlwaysShowEditor]
+    TabOrder = 0
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    OnKeyDown = DBGKeyDown
+    OnMouseMove = DBGMouseMove
+  end
+end

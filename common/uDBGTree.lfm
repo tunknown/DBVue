@@ -1,0 +1,47 @@
+object FrameDBGTree: TFrameDBGTree
+  Left = 0
+  Height = 240
+  Top = 0
+  Width = 320
+  ClientHeight = 240
+  ClientWidth = 320
+  TabOrder = 0
+  DesignLeft = 265
+  DesignTop = 150
+  object DBGTree: TDBGrid
+    Left = 0
+    Height = 240
+    Top = 0
+    Width = 320
+    Align = alClient
+    BorderStyle = bsNone
+    Color = clWindow
+    Columns = <>
+    DataSource = DS
+    FixedCols = 0
+    Options = [dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 0
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+  object SQLQ: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <>
+    SQL.Strings = (
+      ''
+    )
+    Options = [sqoAutoApplyUpdates, sqoAutoCommit, sqoCancelUpdatesOnRefresh, sqoRefreshUsingSelect]
+    Params = <>
+    UsePrimaryKeyAsKey = False
+    Left = 40
+    Top = 36
+  end
+  object DS: TDataSource
+    DataSet = SQLQ
+    Left = 93
+    Top = 36
+  end
+end

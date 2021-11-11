@@ -1,0 +1,187 @@
+object FFilterSingle: TFFilterSingle
+  Left = 248
+  Height = 384
+  Top = 150
+  Width = 512
+  Caption = 'Фильтр @@@@@@@@@@'
+  ClientHeight = 384
+  ClientWidth = 512
+  LCLVersion = '2.0.12.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 334
+    Top = 0
+    Width = 512
+    Align = alClient
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    ClientHeight = 334
+    ClientWidth = 512
+    TabOrder = 0
+    inline FrameDBGTree1: TFrameDBGTree
+      Left = 1
+      Height = 305
+      Top = 28
+      Width = 510
+      Align = alClient
+      ClientHeight = 305
+      ClientWidth = 510
+      inherited DBGTree: TDBGrid
+        Height = 305
+        Width = 510
+        DataSource = DSFilter
+      end
+    end
+    object Panel3: TPanel
+      Left = 1
+      Height = 27
+      Top = 1
+      Width = 510
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 27
+      ClientWidth = 510
+      TabOrder = 1
+      object DBNavigator1: TDBNavigator
+        Left = 269
+        Height = 27
+        Top = 0
+        Width = 241
+        Align = alRight
+        BevelOuter = bvNone
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 27
+        ClientWidth = 241
+        DataSource = DSFilter
+        Flat = True
+        Options = []
+        TabOrder = 0
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 50
+    Top = 334
+    Width = 512
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 50
+    ClientWidth = 512
+    TabOrder = 1
+    object BBSave: TBitBtn
+      Left = 330
+      Height = 30
+      Top = 11
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Сохранить'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BBSaveClick
+      TabOrder = 0
+    end
+    object BBCancel: TBitBtn
+      Left = 421
+      Height = 30
+      Top = 11
+      Width = 75
+      Anchors = [akTop, akRight]
+      Cancel = True
+      Caption = 'Отменить'
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object Edit1: TEdit
+      Left = 8
+      Height = 21
+      Top = 15
+      Width = 308
+      Anchors = [akTop, akLeft, akRight]
+      OnClick = Edit1Click
+      TabOrder = 2
+      Text = 'Edit1'
+    end
+  end
+  object SQLQFilter: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = DM.SQLConnector
+    Transaction = DM.SQLTransaction
+    SQL.Strings = (
+      'declare'#9'@sFilterQuery'#9'nvarchar ( max )'
+      'exec'#9'dbo.GetFilter'
+      #9#9'@sGridObject1='#9':sGridObject'
+      #9#9',@sFilterQuery='#9'@sFilterQuery'#9'output'
+      'exec'#9'( @sFilterQuery )'
+    )
+    InsertSQL.Strings = (
+      ''
+    )
+    UpdateSQL.Strings = (
+      '/*enabling updatable*/'
+    )
+    DeleteSQL.Strings = (
+      ''
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'sGridObject'
+        ParamType = ptInput
+      end>
+    ParseSQL = False
+    UsePrimaryKeyAsKey = False
+    Left = 44
+    Top = 29
+  end
+  object DSFilter: TDataSource
+    DataSet = SQLQFilter
+    Left = 96
+    Top = 29
+  end
+  object SQLQFilterSetup: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = DM.SQLConnector
+    Transaction = DM.SQLTransaction
+    SQL.Strings = (
+      'exec'#9'dbo.SetFilter'
+      #9#9'@sObject='#9':sGridObject'
+      #9#9',@sClass='#9':sClass'
+      #9#9',@sCaption='#9':sCaption'
+      #9#9',@sXML='#9#9':sXML'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'sGridObject'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sClass'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sCaption'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'sXML'
+        ParamType = ptInput
+      end>
+    UsePrimaryKeyAsKey = False
+    Left = 44
+    Top = 83
+  end
+end

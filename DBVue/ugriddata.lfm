@@ -1,0 +1,364 @@
+object RDataGrid: TRDataGrid
+  Left = 0
+  Height = 304
+  Top = 0
+  Width = 805
+  ClientHeight = 304
+  ClientWidth = 805
+  TabOrder = 0
+  TabStop = True
+  DesignLeft = 248
+  DesignTop = 150
+  object PSingle: TPanel
+    Left = 0
+    Height = 304
+    Top = 0
+    Width = 805
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 304
+    ClientWidth = 805
+    TabOrder = 0
+    TabStop = True
+    object PFilterSingle: TPanel
+      Left = 0
+      Height = 304
+      Top = 0
+      Width = 268
+      Align = alLeft
+      BevelInner = bvLowered
+      BevelOuter = bvNone
+      ClientHeight = 304
+      ClientWidth = 268
+      TabOrder = 1
+      TabStop = True
+      object Panel1: TPanel
+        Left = 1
+        Height = 27
+        Top = 1
+        Width = 266
+        Align = alTop
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        Caption = ' Фильтры'
+        ClientHeight = 27
+        ClientWidth = 266
+        TabOrder = 0
+        TabStop = True
+        object DBNSingle1: TDBNavigator
+          Left = 170
+          Height = 27
+          Top = 0
+          Width = 96
+          Align = alRight
+          BevelOuter = bvNone
+          ChildSizing.EnlargeHorizontal = crsScaleChilds
+          ChildSizing.EnlargeVertical = crsScaleChilds
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 100
+          ClientHeight = 27
+          ClientWidth = 96
+          Flat = True
+          Options = []
+          TabOrder = 0
+          TabStop = True
+          VisibleButtons = [nbInsert, nbDelete, nbEdit, nbRefresh]
+        end
+      end
+      inline FrameDBGTree1: TFrameDBGTree
+        Left = 1
+        Height = 275
+        Top = 28
+        Width = 266
+        Align = alClient
+        ClientHeight = 275
+        ClientWidth = 266
+        TabOrder = 1
+        TabStop = True
+        inherited DBGTree: TDBGrid
+          Height = 275
+          Width = 266
+        end
+        inherited SQLQ: TSQLQuery
+          AfterEdit = SQLQFilterAfterEdit
+          Database = DM.SQLConnector
+          Transaction = DM.SQLTransaction
+          SQL.Strings = (
+            'with'#9'obj'#9'as'#9#9#9#9'-- все view и таблицы'
+            '('#9'select'
+            #9#9'TABLE_SCHEMA'
+            #9#9',TABLE_NAME'
+            #9#9',TABLE_TYPE'
+            #9#9',Sequence='#9'str ( row_number()'#9'over'#9'( order'#9'by'#9'TABLE_SCHEMA,'#9'TABLE_NAME ),'#9'4,'#9'0 )'#9'-- todo вместо TABLE_NAME взять Caption?'
+            #9'from'
+            #9#9'INFORMATION_SCHEMA.TABLES'
+            #9'where'
+            #9#9#9'TABLE_CATALOG='#9':DB'
+            #9#9'and'#9'TABLE_NAME'#9'like'#9':Class+'#9'''[.|]_%'''
+            #9#9'and'#9'TABLE_NAME'#9'like'#9'''%_|_%'' )'
+            ','#9'tree'#9'as'#9#9#9#9'-- все view, зависящие от других или ветви деревьев'
+            '('#9'select'
+            #9#9'*'
+            #9'from'
+            #9#9'INFORMATION_SCHEMA.VIEW_TABLE_USAGE'
+            #9'where'
+            #9#9#9'VIEW_CATALOG='#9':DB'
+            #9#9'and'#9'VIEW_NAME'#9'like'#9':Class+'#9'''[.|]_%'''
+            #9#9'and'#9'VIEW_NAME'#9'like'#9'''%_|_%'''
+            #9#9'and'#9'TABLE_CATALOG='#9'VIEW_CATALOG'
+            #9#9'and'#9'TABLE_NAME'#9'like'#9':Class+'#9'''[.|]_%'''
+            #9#9'and'#9'TABLE_NAME'#9'like'#9'''%_|_%'' )'
+            ','#9'root'#9'as'#9#9#9#9'-- корни деревьев'
+            '('#9'select'#9'distinct'
+            #9#9't.TABLE_SCHEMA'
+            #9#9',t.TABLE_NAME'
+            #9'from'
+            #9#9'tree'#9't'
+            #9#9'left'#9'join'#9'tree'#9'v'#9'on'
+            #9#9#9'v.VIEW_SCHEMA='#9't.TABLE_SCHEMA'
+            #9#9'and'#9'v.VIEW_NAME='#9't.TABLE_NAME'
+            #9'where'
+            #9#9#9'v.VIEW_NAME'#9'is'#9'null )'
+            ','#9'cte'#9'as'
+            '('#9'select'
+            #9#9'root.TABLE_SCHEMA'
+            #9#9',root.TABLE_NAME'
+            #9#9',obj.TABLE_TYPE'
+            #9#9',Sequence='#9'convert ( varchar ( 8000 ),'#9'obj.Sequence )'
+            #9'from'
+            #9#9'root'
+            #9#9',obj'
+            #9'where'
+            #9#9#9'obj.TABLE_SCHEMA='#9'root.TABLE_SCHEMA'
+            #9#9'and'#9'obj.TABLE_NAME='#9#9'root.TABLE_NAME'
+            #9'union'#9'all'
+            #9'select'
+            #9#9'tree.VIEW_SCHEMA'
+            #9#9',tree.VIEW_NAME'
+            #9#9',obj.TABLE_TYPE'
+            #9#9',Sequence='#9'convert ( varchar ( 8000 ),'#9'cte.Sequence+'#9'obj.Sequence )'
+            #9'from'
+            #9#9'cte'
+            #9#9',tree'
+            #9#9',obj'
+            #9'where'
+            #9#9#9'tree.TABLE_SCHEMA='#9'cte.TABLE_SCHEMA'
+            #9#9'and'#9'tree.TABLE_NAME='#9'cte.TABLE_NAME'
+            #9#9'and'#9'obj.TABLE_SCHEMA='#9'tree.VIEW_SCHEMA'
+            #9#9'and'#9'obj.TABLE_NAME='#9#9'tree.VIEW_NAME )'
+            'select'
+            #9'cte.TABLE_TYPE'
+            #9',cte.TABLE_SCHEMA'
+            #9',cte.TABLE_NAME'
+            #9',Class='#9#9#9'left ( cte.TABLE_NAME,'#9'patindex ( ''%[.|]_%'','#9'cte.TABLE_NAME )-'#9'1 )'
+            #9',cte.Sequence'
+            #9',Caption='#9#9'right ( cte.TABLE_NAME,'#9'charindex ( ''|'','#9'reverse ( cte.TABLE_NAME ) )-'#9'1 )'
+            #9',Level='#9#9#9'len ( cte.Sequence )/'#9'4-'#9'1'
+            #9',Visible='#9#9'1'
+            #9',ChildrenVisible='#9'case'#9'when'#9'tree.TABLE_NAME'#9'is'#9'null'#9'then'#9'null'#9'else'#9'1'#9'end'
+            #9',Inactive='#9#9'null'
+            'from'
+            #9'cte'
+            #9'left'#9'join'#9'( select'#9'distinct'
+            #9#9#9#9'TABLE_SCHEMA'
+            #9#9#9#9',TABLE_NAME'
+            #9#9#9'from'
+            #9#9#9#9'tree )'#9'tree'#9'on'
+            #9#9'tree.TABLE_SCHEMA='#9'cte.TABLE_SCHEMA'
+            #9'and'#9'tree.TABLE_NAME='#9'cte.TABLE_NAME'
+            'union'#9'all'
+            'select'#9#9#9#9'-- не участвующие в дереве'
+            #9'obj.TABLE_TYPE'
+            #9',obj.TABLE_SCHEMA'
+            #9',obj.TABLE_NAME'
+            #9',Class='#9#9#9'left ( obj.TABLE_NAME,'#9'patindex ( ''%[.|]_%'','#9'obj.TABLE_NAME )-'#9'1 )'
+            #9',obj.Sequence'
+            #9',Caption='#9#9'right ( obj.TABLE_NAME,'#9'charindex ( ''|'','#9'reverse ( obj.TABLE_NAME ) )-'#9'1 )'
+            #9',Level='#9#9#9'len ( obj.Sequence )/'#9'4-'#9'1'
+            #9',Visible='#9#9'1'
+            #9',ChildrenVisible='#9'null'
+            #9',Inactive='#9#9'null'
+            'from'
+            #9'obj'
+            #9'left'#9'join'#9'tree'#9'v'#9'on'
+            #9#9'v.VIEW_SCHEMA='#9'obj.TABLE_SCHEMA'
+            #9'and'#9'v.VIEW_NAME='#9'obj.TABLE_NAME'
+            #9'left'#9'join'#9'tree'#9'vv'#9'on'
+            #9#9'vv.TABLE_SCHEMA=obj.TABLE_SCHEMA'
+            #9'and'#9'vv.TABLE_NAME='#9'obj.TABLE_NAME'
+            'where'
+            #9#9'v.VIEW_NAME'#9'is'#9'null'
+            #9'and'#9'vv.VIEW_NAME'#9'is'#9'null'
+            'order'#9'by'
+            #9'Sequence'
+            'option'
+            #9'( maxrecursion'#9'0 )'
+          )
+          Params = <          
+            item
+              DataType = ftUnknown
+              Name = 'DB'
+              ParamType = ptInput
+            end          
+            item
+              DataType = ftUnknown
+              Name = 'Class'
+              ParamType = ptInput
+            end>
+          Left = 39
+        end
+        inherited DS: TDataSource
+          OnDataChange = DSFilterDataChange
+        end
+      end
+    end
+    object SFilterSingle: TSplitter
+      Left = 268
+      Height = 304
+      Top = 0
+      Width = 5
+    end
+    object PDataSingle: TPanel
+      Left = 273
+      Height = 304
+      Top = 0
+      Width = 532
+      Align = alClient
+      BevelInner = bvLowered
+      BevelOuter = bvNone
+      ClientHeight = 304
+      ClientWidth = 532
+      TabOrder = 0
+      TabStop = True
+      object PControlSingle: TPanel
+        Left = 1
+        Height = 27
+        Top = 1
+        Width = 530
+        Align = alTop
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        ClientHeight = 27
+        ClientWidth = 530
+        TabOrder = 0
+        TabStop = True
+        object DBLCBActionsSingle: TDBLookupComboBox
+          Left = 20
+          Height = 21
+          Top = 3
+          Width = 120
+          Anchors = [akTop, akRight]
+          KeyField = 'ObjectName'
+          ListField = 'Caption'
+          ListFieldIndex = 0
+          ListSource = DSActions
+          LookupCache = False
+          OnSelect = DBLCBActionsSingleSelect
+          ScrollListDataset = True
+          Style = csDropDownList
+          TabOrder = 0
+        end
+        object BBAction: TBitBtn
+          Left = 144
+          Height = 27
+          Top = 0
+          Width = 64
+          Caption = 'Выполнить'
+          OnClick = BBActionClick
+          TabOrder = 1
+        end
+        inline RDBN: TRDBNavigator
+          Left = 289
+          Align = alRight
+          TabOrder = 2
+          TabStop = True
+          inherited DBNSingle: TDBNavigator
+            DataSource = DSMain
+            Hints.Strings = (            )
+            TabStop = True
+          end
+          inherited PDone: TPanel
+            TabStop = True
+          end
+        end
+      end
+      object SErrorSingle: TSplitter
+        Cursor = crVSplit
+        Left = 1
+        Height = 5
+        Top = 248
+        Width = 530
+        Align = alBottom
+        Beveled = True
+        ParentColor = False
+        ResizeAnchor = akBottom
+      end
+      object PErrorSingle: TPanel
+        Left = 1
+        Height = 50
+        Top = 253
+        Width = 530
+        Align = alBottom
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        Caption = 'PErrorSingle'
+        ParentColor = False
+        TabOrder = 2
+        TabStop = True
+      end
+      inline RDBGDM1: TRDBGDM
+        Left = 1
+        Height = 220
+        Top = 28
+        Width = 530
+        Align = alClient
+        ClientHeight = 220
+        ClientWidth = 530
+        TabOrder = 3
+        TabStop = True
+        DesignTop = 105
+        inherited DBGDataSingle: TDBGrid
+          Height = 220
+          Width = 530
+          DataSource = DSMain
+          TabAdvance = aaNone
+          OnDblClick = DBGDataSingleDblClick
+        end
+      end
+    end
+  end
+  object SQLQMain: TSQLQuery
+    PacketRecords = -1
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <>
+    BeforePost = SQLQMainBeforePost
+    Database = DM.SQLConnector
+    Transaction = DM.SQLTransaction
+    SQL.Strings = (
+      ''
+    )
+    Options = [sqoAutoCommit, sqoCancelUpdatesOnRefresh, sqoRefreshUsingSelect]
+    Params = <>
+    UsePrimaryKeyAsKey = False
+    Left = 396
+    Top = 88
+  end
+  object DSMain: TDataSource
+    DataSet = SQLQMain
+    OnStateChange = DSMainStateChange
+    Left = 449
+    Top = 88
+  end
+  object DSActions: TDataSource
+    DataSet = BDActions
+    Left = 333
+  end
+  object BDActions: TBufDataset
+    PacketRecords = -1
+    FieldDefs = <>
+    Left = 280
+  end
+end
